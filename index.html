@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>MrLiu646的主页</title><br>
+	<link rel="stylesheet" href="template">
+</head>
+<body">
+	<link rel="stylesheet" type="text/css" href="template.css"> 
+	<div class="bg-img"></div>
+	<header>MrLiu646的主页</header>
+	<main>
+		<p>这个页面正在施工。</p>
+		<ul> 
+  			<li timeDown="2022/06/24 00:00:00">2022中考倒计时</li>
+		</ul>
+		<script> //倒计时代码源自https://blog.truimo.com/html-liedaojishi.html
+(()=>{
+  var d = document.querySelectorAll("*[timeDown]");
+  for(var i=0; i<d.length; i++){
+    timeDown(d[i],d[i].getAttribute("timeDown"));
+  }
+  function timeDown(e, r){
+    setInterval(()=>{
+      var s={};
+      s.r = new Date(r).getTime() - new Date().getTime();
+      if(s.r > 0){
+        s.d = Math.floor(s.r/1000/60/60/24);
+        s.h = Math.floor(s.r/1000/60/60%24);
+        s.m = Math.floor(s.r/1000/60%60);
+        s.s = Math.floor(s.r/1000%60);
+        e.innerHTML = "距离2022中考"+"还剩"+s.d+"天"+s.h+"小时"+s.m+"分钟"+s.s+"秒";
+      }else{
+        e.innerHTML = "等待成绩......";
+      }
+    },200);
+  }
+})();
+		</script>
+		<ul>
+			<li timeDown2="2022/07/24 00:00:00">广西THONLY2倒计时</li>
+		</ul>
+		<script>
+(()=>{
+  var d = document.querySelectorAll("*[timeDown2]");
+  for(var i=0; i<d.length; i++){
+    timeDown2(d[i],d[i].getAttribute("timeDown2"));
+  }
+  function timeDown2(e, r){
+    setInterval(()=>{
+      var s={};
+      s.r = new Date(r).getTime() - new Date().getTime();
+      if(s.r > 0){
+        s.d = Math.floor(s.r/1000/60/60/24);
+        s.h = Math.floor(s.r/1000/60/60%24);
+        s.m = Math.floor(s.r/1000/60%60);
+        s.s = Math.floor(s.r/1000%60);
+        e.innerHTML = "距离广西THONLY2"+"还剩"+s.d+"天"+s.h+"小时"+s.m+"分钟"+s.s+"秒";
+      }else{
+        e.innerHTML = "已过时";
+      }
+    },200);
+  }
+})();
+		</script>
+		<a href="https://thwiki.cc/%E5%B9%BF%E8%A5%BFTHONLY"><button>广西THONLY在THBWiki上的词条</button></a><br><br>
+		<a href="https://mrl646.vercel.app/AliyunDrive/"><button>Exagear下载站(国内站)</button></a><br>
+		<a href="https://exaserver.vercel.app/zh-CN/"><button>Exagear下载站(备用站)</button></a><br>
+		<a href="README.md"><button>服务器说明</button></a><br>
+		<a href="exainst.html"><button>Exagear安装教程</button></a><br><br>
+		<a href="countdown2.html"><button>广西THONLY2倒计时</button></a><br>
+		<a href="zhongkao_countdown.html"><button>2022中考倒计时</button></a><br><br>
+		<a href="404.html"><button>404页面</button></a>
+	</main>
+</body>
+</html>
